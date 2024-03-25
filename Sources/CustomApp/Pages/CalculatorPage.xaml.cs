@@ -1,3 +1,5 @@
+using CustomApp.Models.Pages;
+
 namespace CustomApp.Pages;
 
 public partial class CalculatorPage : ContentPage
