@@ -12,9 +12,11 @@ namespace CustomApp.Models.Pages
 
         private CalculatorPageModel() {}
 
-        private string? _number1;
-        private string? _number2;
-        private string? _operation;
+        private double? _number1 = 0;
+        private double? _number2 = 0;
+        private string? _operation = string.Empty;
+        private string? _currentImput = string.Empty;
+        private double? _result = 0;
 
         public string? Operation
         {
@@ -22,8 +24,36 @@ namespace CustomApp.Models.Pages
             get => _operation;
 
         }
-        
+
+        public double? Number1
+        {
+            set => SetProperty(ref _number1, value);
+            get => _number1;
+        }
+
+        public double? Number2
+        {
+            set => SetProperty(ref _number2, value);
+            get => _number2;
+        }
+
+        public string? CurrentImput
+        {
+            set => SetProperty(ref _currentImput, value);
+            get => _currentImput;
+        }
+
+        public double? Result
+        {
+            set => SetProperty(ref _result, value);
+            get => _result;
+        }
+
        
+           
+        
     }
    
 }
+   
+

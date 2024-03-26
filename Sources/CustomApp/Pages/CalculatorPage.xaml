@@ -7,7 +7,7 @@
     <StackLayout Padding="20">
         <Label Text="Calculator" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,30"/>
 
-        <Entry x:Name="resultDisplay" Text="0" HorizontalTextAlignment="End" FontSize="Large" Margin="0,0,0,20"/>
+        <Entry x:Name="resultDisplay" Text="{Binding Path=Result}" HorizontalTextAlignment="End" FontSize="Large" Margin="0,0,0,20"/>
 
         <Grid ColumnSpacing="10" RowSpacing="10">
             <Grid.RowDefinitions>
@@ -23,22 +23,22 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Button Text="7" Grid.Row="0" Grid.Column="0"/>
-            <Button Text="8" Grid.Row="0" Grid.Column="1"/>
-            <Button Text="9" Grid.Row="0" Grid.Column="2"/>
-            <Button Text="*" Grid.Row="0" Grid.Column="3"/>
-            <Button Text="4" Grid.Row="1" Grid.Column="0"/>
-            <Button Text="5" Grid.Row="1" Grid.Column="1"/>
-            <Button Text="6" Grid.Row="1" Grid.Column="2"/>
-            <Button Text="-" Grid.Row="1" Grid.Column="3"/>
-            <Button Text="1" Grid.Row="2" Grid.Column="0"/>
-            <Button Text="2" Grid.Row="2" Grid.Column="1"/>
-            <Button Text="3" Grid.Row="2" Grid.Column="2"/>
-            <Button Text="+" Grid.Row="2" Grid.Column="3"/>
-            <Button Text="C" Grid.Row="3" Grid.Column="0"/>
-            <Button Text="0" Grid.Row="3" Grid.Column="1"/>
-            <Button Text="=" Grid.Row="3" Grid.Column="2"/>
-            <Button Text="/" Grid.Row="3" Grid.Column="3"/>
+            <Button Text="7" Grid.Row="0" Grid.Column="0" Clicked="OnNumberClicked"/>
+            <Button Text="8" Grid.Row="0" Grid.Column="1" Clicked="OnNumberClicked"/>
+            <Button Text="9" Grid.Row="0" Grid.Column="2" Clicked="OnNumberClicked"/>
+            <Button Text="*" Grid.Row="0" Grid.Column="3" Clicked="OnOperatorClicked"/>
+            <Button Text="4" Grid.Row="1" Grid.Column="0" Clicked="OnNumberClicked"/>
+            <Button Text="5" Grid.Row="1" Grid.Column="1" Clicked="OnNumberClicked"/>
+            <Button Text="6" Grid.Row="1" Grid.Column="2" Clicked="OnNumberClicked"/>
+            <Button Text="-" Grid.Row="1" Grid.Column="3" Clicked="OnOperatorClicked"/>
+            <Button Text="1" Grid.Row="2" Grid.Column="0" Clicked="OnNumberClicked"/>
+            <Button Text="2" Grid.Row="2" Grid.Column="1" Clicked="OnNumberClicked"/>
+            <Button Text="3" Grid.Row="2" Grid.Column="2" Clicked="OnNumberClicked"/>
+            <Button Text="+" Grid.Row="2" Grid.Column="3" Clicked="OnOperatorClicked"/>
+            <Button Text="C" Grid.Row="3" Grid.Column="0" Clicked="OnClearClicked"/>
+            <Button Text="0" Grid.Row="3" Grid.Column="1" Clicked="OnNumberClicked"/>
+            <Button Text="=" Grid.Row="3" Grid.Column="2" Clicked="OnEqualClicked"/>
+            <Button Text="/" Grid.Row="3" Grid.Column="3" Clicked="OnOperatorClicked"/>
         </Grid>
     </StackLayout>
 </ContentPage>
